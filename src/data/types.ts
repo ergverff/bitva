@@ -14,14 +14,14 @@ export interface BaseQuestion {
 // Вопрос с одним правильным ответом
 export interface SingleQuestion extends BaseQuestion {
   type: 'single';
-  options: string[];
+  options: string[] | PersonalityOption[]; // для quiz - строки, для personality - объекты
   correct: number; // индекс правильного ответа
 }
 
 // Вопрос с несколькими правильными ответами
 export interface MultipleQuestion extends BaseQuestion {
   type: 'multiple';
-  options: string[];
+  options: string[] | PersonalityOption[]; // для quiz - строки, для personality - объекты
   correct: number[]; // индексы правильных ответов
 }
 
@@ -46,8 +46,7 @@ export interface PersonalityOption {
 // Вопрос для personality-теста
 export interface PersonalityQuestion extends BaseQuestion {
   type: 'single' | 'multiple';
-  options: string[];
-  optionResults: string[]; // resultId для каждого варианта
+  options: PersonalityOption[]; // массив объектов с text и resultId
 }
 
 // Объединённый тип вопроса
@@ -139,6 +138,9 @@ export interface Achievement {
   unlocked: boolean;
   unlockedAt?: number;
 }
+
+// Тип ответа игрока
+export type Answer = number | number[] | boolean | string | null;
 
 // Конфигурация рекламы
 export interface AdsConfig {

@@ -1,46 +1,66 @@
 ```
-# Dependencies
-node_modules/
-
-# Build artifacts
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
 dist/
 build/
-*.js.map
-*.mjs.map
+target/
 
-# Environment variables
+# Dependencies
+node_modules/
+venv/
+.venv/
 .env
 .env.local
-*.env.*
+.env.*
 
-# IDE and editor files
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-*.tmp
-
-# Logs
-*.log
-
-# Package lock
-package-lock.json
 
 # Coverage reports
 coverage/
 htmlcov/
-*.coverage
+.coverage
 
-# TypeScript
-*.tsbuildinfo
+# Python specific
+.mypy_cache/
+.pytest_cache/
 
-# OS generated files
+# OS specific
 .DS_Store
 Thumbs.db
 
-# Vite specific
-.vite/
-
-# Rollup/Rolldown specific
-.rolldown/
+# Archives
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
