@@ -1,0 +1,84 @@
+/* ============================================
+   ДИЗАЙН-ТОКЕНЫ "БИТВА УМНИКОВ"
+   Швейцарская плакатная типографика + редакционная сетка
+   ============================================ */
+
+:root {
+  /* === ЦВЕТОВАЯ ПАЛИТРА (ТЕМНАЯ ТЕМА ПО УМОЛЧАНИЮ) === */
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-elevated: #1c1c1c;
+  --text: #fafafa;
+  --text-muted: #a0a0a0;
+  --line: #2a2a2a;
+  
+  /* АКЦЕНТ — ЗАГЛУШКА (разработчик заменит одной строкой) */
+  --accent: #4a7cff;
+  --accent-hover: #5a8cff;
+  --accent-muted: rgba(74, 124, 255, 0.15);
+  
+  /* === ТИПОГРАФИКА === */
+  /* Токены шрифтов — заменятся на локальные файлы */
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Размеры шрифтов — адаптивные через clamp() */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --text-3xl: clamp(1.75rem, 1.4rem + 1.75vw, 2.5rem);
+  --text-4xl: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  --text-display: clamp(2.5rem, 2rem + 3vw, 5rem);
+  
+  /* Letter spacing для caps */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  
+  /* === СЕТКА 8PT === */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  
+  /* === РАДИУСЫ === */
+  /* По умолчанию острые/почти острые */
+  --radius: 2px;
+  --radius-chip: 9999px; /* Только для чипов-тэгов */
+  
+  /* === АНИМАЦИИ === */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* === Z-INDEX === */
+  --z-dropdown: 100;
+  --z-toast: 200;
+  --z-modal: 300;
+}
+
+/* === СВЕТЛАЯ ТЕМА === */
+[data-theme="light"] {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-elevated: #f5f5f5;
+  --text: #0a0a0a;
+  --text-muted: #666666;
+  --line: #e5e5e5;
+  --accent-muted: rgba(74, 124, 255, 0.1);
+}
